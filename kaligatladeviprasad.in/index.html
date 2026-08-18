@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang=en>
+
+<head>
+    <meta charset=utf-8>
+    <meta name=viewport content="width=device-width,initial-scale=1">
+    <title>Kaligatla Devi Prasad | Portfolio</title>
+    <meta name=description
+        content="Portfolio of Kaligatla Devi Prasad, Mathematics and Computing Undergraduate at IISc Bengaluru.">
+    <link rel=stylesheet href=css/main.min.randomcode.css>
+</head>
+
+<body>
+    <header class=site-header>
+        <div class="wrap site-header__inner">
+            <a class=site-header__brand href= />Kaligatla Devi Prasad</a>
+            <button class=site-header__toggle aria-expanded=false aria-controls=site-nav id=navToggle>
+                <span class=sr-only>Menu</span>
+                <span aria-hidden=true>&#9776;</span>
+            </button>
+            <nav class=site-nav id=site-nav aria-label=Primary>
+                <ul>
+                    <li><a href=#about>About</a></li>
+                    <li><a href=#experience>Experience</a></li>
+                    <li><a href=#projects>Projects</a></li>
+                    <li><a href=#leadership>Leadership</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <script>
+        document.getElementById("navToggle").addEventListener("click", function () {
+            var e = document.getElementById("site-nav")
+                , t = this.getAttribute("aria-expanded") === "true";
+            this.setAttribute("aria-expanded", String(!t)),
+                e.classList.toggle("is-open")
+        })
+    </script>
+    <main class="wrap page">
+        <section class=hero id=about>
+            <img class=hero__portrait src=img/profile.jpg alt="Kaligatla Devi Prasad">
+            <div class=hero__intro>
+                <h1>Kaligatla Devi Prasad</h1>
+                <p class=hero__title>
+                    Mathematics and Computing Undergraduate<br>Indian Institute of Science, Bengaluru
+                </p>
+                <div class=hero__bio>
+                    <p>
+                        Hi, I'm a software engineering and ML/AI enthusiast seeking opportunities to apply my strong
+                        foundation in data structures, algorithms, and computability. I have hands-on experience in
+                        building efficient computing systems and implementing generative models. I hold a stellar
+                        academic record from the <strong>Indian Institute of Science (IISc)</strong>.
+                    </p>
+                </div>
+                <p class=hero__cta>
+                    <a class="btn btn--primary" href="https://www.github.com/deviprasad-01-10" target=_blank>GitHub
+                        &rarr;</a>
+                    <a class=btn href="http://www.linkedin.com/in/kaligatla-devi-prasad/fr" target=_blank>LinkedIn</a>
+                    <a class=btn href="mailto:kaligatladeviprasad@gmail.com">Contact Me</a>
+                </p>
+            </div>
+        </section>
+
+        <section class=stats aria-label="Academic Excellence">
+            <h2 style="text-align: center; margin-bottom: 2rem;">Achievements</h2>
+            <div class=stats__grid>
+                <div class=stat>
+                    <span class=stat__value>AIR 1671</span>
+                    <span class=stat__label>JEE Advanced (OBC-NCL: 266) out of ∼180,000</span>
+                </div>
+                <div class=stat>
+                    <span class=stat__value>AIR 1047</span>
+                    <span class=stat__label>JEE Mains B.Tech (OBC-NCL: 168) out of ∼1.5M</span>
+                </div>
+                <div class=stat>
+                    <span class=stat__value>491/500</span>
+                    <span class=stat__label>CBSE Class XII (98.2%) featured in regional news</span>
+                </div>
+                <div class=stat>
+                    <span class=stat__value>AIR 5</span>
+                    <span class=stat__label>JEE Mains B.Planning (Top Percentile)</span>
+                </div>
+                <div class=stat>
+                    <span class=stat__value>Rank 368</span>
+                    <span class=stat__label>AP EAMCET State Rank</span>
+                </div>
+            </div>
+        </section>
+
+        <section class=spotlight id=experience>
+            <div class=spotlight__body>
+                <span class=spotlight__badge>Internship</span>
+                <h2>TANUH Engineering Intern</h2>
+                <p class=spotlight__date>May'26 – Jul'26</p>
+                <ul style="margin-top: 1.5rem; margin-left: 1.5rem; text-align: left;">
+                    <li style="margin-bottom: 0.5rem;">Engineered an end-to-end mammographic tissue density
+                        classification pipeline for 4-class BI-RADS (A–D) prediction, preprocessing 25,000+ DICOM
+                        mammograms from the publicly available datasets with patient-level leakage-free train/test
+                        splitting.</li>
+                    <li style="margin-bottom: 0.5rem;">Designed & benchmarked 30+ tree-based and boosting classifiers
+                        using scikit-learn and XGBoost, achieving 85.1% accuracy and 0.850 macro F1 while eliminating
+                        catastrophic A↔D misclassifications.</li>
+                    <li style="margin-bottom: 0.5rem;">Achieved Rank #1 on an external mammography benchmark (Macro F1:
+                        0.575, Cohen's κ: 0.731, Accuracy : 56.50%) and analyzed DR-to-CR domain shift, showing Random
+                        Forest generalized better than gradient boosting under distribution shift.</li>
+                    <li style="margin-bottom: 0.5rem;">Developed a Multi-view Mammography classification framework using
+                        CC/MLO fusion with a dual-stream Swin-Base + DenseNet121 architecture, followed by Feature-based
+                        Knowledge distillation for model compression, producing an ONNX-compatible lightweight Student
+                        Model optimized for latency and real-time deployment.</li>
+                    <li style="margin-bottom: 0.5rem;">Fine-tuned Vision Transformer (Swin-Base) and CNN (ConvNeXt-Tiny)
+                        backbones in PyTorch to learn mammography-specific feature embeddings, with Swin-Base
+                        consistently outperforming ConvNeXt-Tiny across downstream classifiers.</li>
+                    <li style="margin-bottom: 0.5rem;">Benchmarked the final distilled student model against an external
+                        dataset establishing the lightweight model as the top-performing architecture out of the entire
+                        model suite.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="callout callout--teaching" id=projects>
+            <div class=callout__body>
+                <h2>Latent Space Constraints in Generative Autoencoders</h2>
+                <p>Programmed and trained Standard VAE, InfoVAE, and discrete VQ-VAE model architectures using PyTorch
+                    and cloud-based GPU acceleration to evaluate different latent space structures. Investigated and
+                    mitigated posterior collapse across different decoder capacities on CIFAR-10 and CelebA datasets.
+                </p>
+                <a class="btn btn--primary" style="margin-top: 1rem;"
+                    href="https://github.com/vae-latent-space/deep-generative-models-comparison" target=_blank>View on
+                    GitHub</a>
+            </div>
+        </section>
+
+        <section class="callout callout--lab">
+            <div class=callout__body>
+                <h2>Numerical Methods & Algorithms</h2>
+                <p>Implemented numerical algorithms from scratch using Python and C++, including Gradient Descent, Least
+                    Squares, Root Finding, and ODE Solvers. Solved the inverse kinematics of a 3-link planar robotic
+                    arm, reducing convergence iterations from 682 to 89.</p>
+                <br>
+                <h2>Nested Word Automata (NWA)</h2>
+                <p>Explored NWA as an efficient computational model for parsing data with both linear and hierarchical
+                    structures. Analyzed practical applications in automated program verification and Natural Language
+                    Processing (NLP).</p>
+            </div>
+        </section>
+
+        <section class="callout callout--teaching" id=leadership>
+            <div class=callout__body>
+                <h2>Position of Responsibilities and Extra-Curricular Activities</h2>
+                <br>
+                <p><strong>POSITION OF RESPONSIBILITY</strong></p>
+                <ul style="margin-left: 1.5rem; margin-bottom: 1.5rem;">
+                    <li style="margin-bottom: 0.5rem;">Serving as Election Commissioner for Student Council Elections
+                        2026-27</li>
+                    <li style="margin-bottom: 0.5rem;">Serving as Mess Committee member at our Hostel Mess</li>
+                    <li style="margin-bottom: 0.5rem;">Spearheaded ground-level logistics and operational planning for
+                        IISc’s flagship annual science and cultural fest, Pravega, ensuring the seamless execution of
+                        large-scale campus events.</li>
+                    <li style="margin-bottom: 0.5rem;">Directed logistical operations and scheduling for the
+                        undergraduate sports meet, successfully organizing and executing a wide range of sporting events
+                        for the under-graduate student body.</li>
+                    <li style="margin-bottom: 0.5rem;">Organized campus-wide Ugadi celebrations, managing event
+                        logistics, correspondence, and team contributions.</li>
+                </ul>
+                <p><strong>EXTRA-CURRICULAR ACTIVITIES</strong></p>
+                <ul style="margin-left: 1.5rem;">
+                    <li>I love to play Cricket. I'm a Batting All-rounder</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer class=site-footer>
+        <div class="wrap site-footer__inner">
+            <div class=site-footer__col>
+                <p class=site-footer__name>Kaligatla Devi Prasad</p>
+                <p class=site-footer__title>
+                    Mathematics and Computing Undergraduate<br>Indian Institute of Science, Bengaluru
+                </p>
+            </div>
+            <div class=site-footer__col>
+                <p>
+                </p>
+                <p>
+                    <a href=mailto:kaligatladeviprasad@gmail.com>kaligatladeviprasad@gmail.com</a>
+                </p>
+            </div>
+            <div class=site-footer__col>
+                <ul class=site-footer__social>
+                    <li>
+                        <a href=http://www.linkedin.com/in/kaligatla-devi-prasad/fr>LinkedIn</a>
+                    </li>
+                    <li>
+                        <a href=https://www.github.com/deviprasad-01-10>GitHub</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <p class="site-footer__copyright wrap">&copy; 2026 Kaligatla Devi Prasad. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
